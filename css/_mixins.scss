@@ -1,0 +1,27 @@
+@mixin transition{
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin flex($dir, $content: center, $items: center){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $content;
+    align-items: $items;
+}
+
+@mixin desktop{
+    @media(min-width: 992px){
+        @content;
+    }
+}
+
+@mixin title-text($font-size) {
+    font-size: $font-size;
+}
+
+@mixin ourcoffe-title($color,$font) {
+    .heading-#{$color} {
+        color : white;
+        #{$font} : 2.5rem;
+    }
+}
